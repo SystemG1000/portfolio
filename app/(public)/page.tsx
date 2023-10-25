@@ -1,11 +1,11 @@
 import Image from "next/image";
-import photo from "../public/assets/PhotoProfille.png";
-import profile from "../public/assets/user.svg";
-import home from "../public/assets/home.svg";
-import folder from "../public/assets/folder.svg";
-import book from "../public/assets/book.svg";
-import email from "../public/assets/email.svg";
-import download from "../public/assets/download.svg";
+import photo from "../../public/assets/PhotoProfille.png";
+import profile from "../../public/assets/user.svg";
+import home from "../../public/assets/home.svg";
+import folder from "../../public/assets/folder.svg";
+import book from "../../public/assets/book.svg";
+import email from "../../public/assets/email.svg";
+import download from "../../public/assets/download.svg";
 
 import styles from "./page.module.css";
 
