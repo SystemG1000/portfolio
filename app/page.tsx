@@ -1,56 +1,63 @@
 import Image from "next/image";
 import photo from "../public/assets/PhotoProfille.png";
+import profile from "../public/assets/user.svg";
+import home from "../public/assets/home.svg";
+import folder from "../public/assets/folder.svg";
+import book from "../public/assets/book.svg";
+import email from "../public/assets/email.svg";
+import download from "../public/assets/download.svg";
+
 import styles from "./page.module.css";
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className={styles.profileContainer}>
+        <div className={styles.profileContainer}>
 
-        <div className={styles.profileLeft}>
-          <div className={styles.profileDetail}></div>
-          <div className={styles.profilePhotoBG}>
-            <Image src={photo} className={styles.photoProfile} alt="Descrição da imagem" />
-          </div>
-        </div>
-
-        <div className={styles.profileRight}>
-          <h1 className={styles.name}>
-            Hi, I'm <span>Gustavo Alfredo.</span> A Web Developer.
-          </h1>
-          <p>
-          Sou desenvolvimento web, utilizando TypeScript, React e Vue no front-end, e Java Spring e 
-          NodeJS no back-end. Possuo habilidade em prototipagem utilizando o Figma, além de 
-          conhecimento na utilização de bancos de dados 
-          como PostgreSQL e MySQL. 
-          </p>
-          <div className={styles.btnCv}>
-            <a href="" className={styles.btnMain}>
-              <span className={styles.btnText}>Download CV</span>
-              <span className={styles.btnIcon}><i className={`${styles.fas} + ${styles.faDownload}`}></i></span>
-            </a>
+          <div className={styles.profileLeft}>
+            <div className={styles.profileDetail}></div>
+            <div className={styles.profilePhotoBG}>
+              <Image src={photo} className={styles.photoProfile} alt="Descrição da imagem" loading="lazy"  />
+            </div>
           </div>
 
+          <div className={styles.profileRight}>
+            <h1 className={styles.name}>
+              Hi, I'm <span>Gustavo Alfredo.</span> A Web Developer.
+            </h1>
+            <p>
+            Sou desenvolvimento web, utilizando TypeScript, React e Vue no front-end, e Java Spring e 
+            NodeJS no back-end. Possuo habilidade em prototipagem utilizando o Figma, além de 
+            conhecimento na utilização de bancos de dados 
+            como PostgreSQL e MySQL. 
+            </p>
+            <div className={styles.btnCv}>
+              <a href="" className={styles.btnMain}>
+                <span className={styles.btnText}>Download CV</span>
+                <span className={styles.btnIcon}><i className={`${styles.fas} + ${styles.faDownload}`}><Image src={download} alt="download" loading="lazy" /></i></span>
+              </a>
+            </div>
+          </div>
+          
 
-          <div className="controls">
-        <div className="control active-btn" data-id="home" >
-            <i className="fas fa-home"></i>
+          <div className={styles.controls}>
+            <div className={`${styles.control} + ${styles.active}`}>
+              <Image src={home} alt="home" />
+            </div>
+            <div className={styles.control}>
+              <Image src={profile} alt="profile" />
+            </div>
+            <div className={styles.control}>
+              <Image src={folder} alt="folder" />
+            </div>
+            <div className={styles.control}>
+              <Image src={book} alt="book" />
+            </div>
+            <div className={styles.control}>
+              <Image src={email} alt="email" />
+            </div>
+          </div>
         </div>
-        <div className="control" data-id="about">
-            <i className="fas fa-user"></i>
-        </div>
-        <div className="control" data-id="portfolio">
-            <i className="fas fa-briefcase"></i>
-        </div>
-        <div className="control" data-id="blogs">
-            <i className="far fa-newspaper"></i>
-        </div>
-        <div className="control" data-id="contact">
-            <i className="fas fa-envelope-open"></i>
-        </div>
-    </div>
-        </div>
-      </div>
     </main>
   );
 }

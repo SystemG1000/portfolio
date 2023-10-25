@@ -77,6 +77,8 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  list-style: none;
+  text-decoration: none;
 }
 
 html,
@@ -102,52 +104,3 @@ body {
  */
 
 
- .controls {
-  top: auto;
-  bottom: 0;
-  flex-direction: row;
-  justify-content: center;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  background-color: blueviolet;
-}
-.controls .control {
-  margin: 1rem 0.3rem;
-}
-.controls {
-  position: fixed;
-  z-index: 10;
-  top: 50%;
-  right: 3%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  transform: translateY(-50%);
-}
-.controls .control {
-  padding: 1rem;
-  cursor: pointer;
-  background-color: cadetblue;
-  width: 55px;
-  height: 55px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0.7rem 0;
-  box-shadow: 5px;
-}
-.controls .control i {
-  font-size: 1.2rem;
-  color: beige;
-  pointer-events: none;
-}
-.controls .active-btn {
-  background-color: blueviolet;
-  transition: all 0.4s ease-in-out;
-}
-.controls .active-btn i {
-  color: white;
-}
