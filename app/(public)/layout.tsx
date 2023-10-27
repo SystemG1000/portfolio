@@ -1,6 +1,15 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import styles from "./page.module.css";
+import Image from 'next/image'; 
+import profile from "../../public/assets/user.svg";
+import home from "../../public/assets/home.svg";
+import folder from "../../public/assets/folder.svg";
+import book from "../../public/assets/book.svg";
+import email from "../../public/assets/email.svg";
+import Link from 'next/link';
+import Head from "./head"
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,8 +25,26 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <Head />
       <body className={inter.className}>
         {children}
+        <div className={styles.controls}>
+            <div className={`${styles.control} + ${styles.active}`}>
+              <Link href={"/"}><Image src={home} alt="home" /></Link>
+            </div>
+            <div className={styles.control}>
+              <Link href={"/profile"}><Image src={profile} alt="profile" /></Link>
+            </div>
+            <div className={styles.control}>
+              <Link href={"./folder"}><Image src={folder} alt="folder" /> </Link>
+            </div>
+            <div className={styles.control}>
+              <Link href={"./news"}><Image src={book} alt="book" /> </Link>
+            </div>
+            <div className={styles.control}>
+              <Link href={"./contact"}><Image src={email} alt="email" /> </Link>
+            </div>
+          </div>
       </body>
     </html>
   )

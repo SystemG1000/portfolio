@@ -1,10 +1,5 @@
 import Image from "next/image";
 import photo from "../../public/assets/PhotoProfille.png";
-import profile from "../../public/assets/user.svg";
-import home from "../../public/assets/home.svg";
-import folder from "../../public/assets/folder.svg";
-import book from "../../public/assets/book.svg";
-import email from "../../public/assets/email.svg";
 import download from "../../public/assets/download.svg";
 
 import styles from "./page.module.css";
@@ -12,7 +7,7 @@ import styles from "./page.module.css";
 export default function Home() {
   return (
     <main className={styles.main}>
-        <div className={styles.profileContainer}>
+        <div className={`${styles.profileContainer} + ${styles.active}`}>
 
           <div className={styles.profileLeft}>
             <div className={styles.profileDetail}></div>
@@ -40,7 +35,7 @@ export default function Home() {
           </div>
           
 
-          <div className={styles.controls}>
+          {/* <div className={styles.controls}>
             <div className={`${styles.control} + ${styles.active}`}>
               <Image src={home} alt="home" />
             </div>
@@ -56,7 +51,7 @@ export default function Home() {
             <div className={styles.control}>
               <Image src={email} alt="email" />
             </div>
-          </div>
+          </div> */}
         </div>
     </main>
   );
