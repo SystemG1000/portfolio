@@ -5,10 +5,10 @@ import Image from "next/image";
 export default function LoginPage() {
 
   return (
-    <div className={styles.aboutSection}>
+    <div className={`${styles.aboutSection} + ${styles.activeAnimation}`}>
       <section className={`${styles.container} + ${styles.about}`}>
         <div className={styles.mainTitle}>
-          <h2>About <span>me</span><span className={styles.bgText}>my stats</span></h2>
+          <h2>About <span>me</span><span className={styles.bgText}>About me</span></h2>
         </div>
 
         <div className={styles.aboutContainer}>

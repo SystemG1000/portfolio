@@ -1,5 +1,11 @@
-/* Desktop */
-.main {
+
+@font-face {
+  font-family: 'MrRobot';
+  src: local('MrRobot'), url('../../public/assets/mr-robot/MR\ ROBOT.ttf') format('truetype');
+}
+
+/* ============ Desktop ============*/
+.content {
   background-color: #2A2E35;
   font-family: 'Fira Code', monospace;
   font-size: 1.1rem;
@@ -7,11 +13,21 @@
   transition: all 0.4s ease-in-out;
 }
 
-.profileContainer {
+.main {
+  min-height: 100vh;
+  color: whitesmoke;
+  overflow: hidden;
+  padding: 0 !important;
+}
+
+.mainContent {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   min-height: 100vh;
 }
+
+
+/* =========== PROFILE LEFT ============*/
 
 .profileLeft {
   display: flex;
@@ -23,13 +39,12 @@
   transition: all 0.4s ease-in-out;
   width: 65%;
   height: 100%;
-  background-color: #972DA8 !important;
+  background-color: #972DA8;
   position: absolute;
   left: 0;
   top: 0;
-  z-index: 1;
+  z-index: -1;
   clip-path: polygon(0 0, 46% 0, 79% 100%, 0% 100%);
-  display: grid;
 }
 
 .profilePhotoBG {
@@ -38,8 +53,7 @@
   width: 50%;
   margin-left: 4rem;
   background-color: #1E1E1E;
-  transition: all 0.4s ease-in-out;
-  z-index: 2;
+  transition: all 0.4s ease-in-out;;
 }
 
 .photoProfile {
@@ -53,7 +67,7 @@
 
 
 
-/* =============================================================*/
+/* ===================PROFILE RIGHT==============================*/
 
 
 .profileRight  {
@@ -61,11 +75,6 @@
   flex-direction: column;
   justify-content: center;
   padding-right: 18rem;
-}
-
-@font-face {
-  font-family: 'MrRobot';
-  src: local('MrRobot'), url('../../public/assets/mr-robot/MR\ ROBOT.ttf') format('truetype');
 }
 
 .name {
@@ -138,8 +147,36 @@
   padding: 0.5rem;
 }
 
+.mainTitle {
+  text-align: center;
+}
+.mainTitle h2 {
+  position: relative;
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: 700;
+}
+.mainTitle h2 span {
+  color: #972DA8;
+}
+.mainTitle h2 .bgText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #404040;
+  transition: all 0.4s ease-in-out;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  font-weight: 800;
+  font-size: 6.3rem;
+}
 
-/* CONTROLS */
+.about-container .left-about p {
+  padding-left: 0;
+}
+
+
+/* =============== CONTROLS ============== */
 
 
 .controls {
@@ -219,7 +256,7 @@
   justify-content: center;
   position: relative;
   }
-  .profileContainer {
+  .mainContent {
     grid-template-columns: repeat(1, 1fr);
     padding-bottom: 6rem;
   }
@@ -272,10 +309,16 @@
   }
 }
 
+@media screen and (max-width: 1432px) {
+ /*  .profileRight  {
+    padding: 2rem 5rem;
+  } */
+}
+
 
 /* Animações */
 
-.active {
+.activeAnimation {
   animation: appear 1s ease-in-out;
   transform: translateY(0) scaleY(1);
 }
