@@ -120,7 +120,9 @@
     z-index: 1;
   }
  
-
+  .workInProgress {
+    background-color: antiquewhite;
+  }
 
 @media screen and (max-width: 600px) {
     .container {
