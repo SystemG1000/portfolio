@@ -147,6 +147,34 @@
   justify-content: flex-start;
 }
 
+
+
+
+.submitBtn {
+  
+}
+
+.submitBtn input {
+  font-family: 'Fira Code';
+  font-size: 15px;
+  border-radius: 40px;
+  color: whitesmoke;
+  font-weight: 600;
+  position: relative;
+  border: 4px dashed #972DA8;
+  display: flex;
+  align-self: flex-start;
+  align-items: center;
+  overflow: hidden;
+  padding: 1rem 3rem;
+  background-color: transparent;
+}
+
+.submitBtn input:hover {
+  background-color: #972DA8;
+}
+
+
 @media screen and (max-width: 600px) {
   
   .contactContentCon {

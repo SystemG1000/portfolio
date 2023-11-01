@@ -87,7 +87,7 @@ export default function LoginPage() {
                   ></textarea>
                 </div>
                 <div className={styles.submitBtn}>
-                  <a href="#" className={styles.mainBtn}></a>
+                  <input type="submit" />
                 </div>
               </form>
             </div>
