@@ -1,8 +1,8 @@
 import Image from "next/image";
 import photo from "../../public/assets/PhotoProfille.png";
-import download from "../../public/assets/download.svg";
+import download from "../../public/assets/iconsHeader/download.svg";
 
-import styles from "./page.module.css";
+import styles from "./home.module.css";
 
 export default function Home() {
   return (

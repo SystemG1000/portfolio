@@ -1,13 +1,13 @@
 'use client'
 
 import './globals.css'
-import styles from "./page.module.css";
+import styles from "./home.module.css";
 import Image from 'next/image'; 
-import profile from "../../public/assets/user.svg";
-import home from "../../public/assets/home.svg";
-import folder from "../../public/assets/folder.svg";
-import book from "../../public/assets/book.svg";
-import email from "../../public/assets/email.svg";
+import profile from "../../public/assets/iconsHeader/user.svg";
+import home from "../../public/assets/iconsHeader/home.svg";
+import folder from "../../public/assets/iconsHeader/folder.svg";
+import book from "../../public/assets/iconsHeader/book.svg";
+import email from "../../public/assets/iconsHeader/email.svg";
 import Link from 'next/link';
 import { usePathname } from 'next/navigation'
 
