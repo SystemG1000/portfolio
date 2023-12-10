@@ -1,11 +1,11 @@
 import Image from "next/image";
 import styles from "./folder.module.css";
 
-import por1 from "../../../public/assets/port1.jpg";
-import Cardapio from "../../../public/assets/cardapio.png";
-import Github from "../../../public/assets/github.svg";
-import Xadrez from "../../../public/assets/xadrez.png";
-import WorkInProgress from "../../../public/assets/workInProgress.jpg";
+import por1 from "../../../../public/assets/port1.jpg";
+import Cardapio from "../../../../public/assets/cardapio.png";
+import Github from "../../../../public/assets/github.svg";
+import Xadrez from "../../../../public/assets/xadrez.png";
+import WorkInProgress from "../../../../public/assets/workInProgress.jpg";
 
 type ObjectFit = "fill" | "contain" | "cover" | "none" | "scale-down";
 

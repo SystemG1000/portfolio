@@ -1,12 +1,12 @@
 import styles from "./contact.module.css";
 import Image from "next/image";
 
-import Twitter from "../../../public/assets/iconsItemTech/contact/twitter.svg";
-import GitHub from "../../../public/assets/iconsItemTech/contact/mdi_github.svg";
-import Locate from "../../../public/assets/iconsItemTech/contact/locate.svg";
-import Language from "../../../public/assets/iconsItemTech/contact/language.svg";
-import Email from "../../../public/assets/iconsItemTech/contact/email.svg";
-import Phone from "../../../public/assets/iconsItemTech/contact/phone.svg";
+import Twitter from "../../../../public/assets/iconsItemTech/contact/twitter.svg";
+import GitHub from "../../../../public/assets/iconsItemTech/contact/mdi_github.svg";
+import Locate from "../../../../public/assets/iconsItemTech/contact/locate.svg";
+import Language from "../../../../public/assets/iconsItemTech/contact/language.svg";
+import Email from "../../../../public/assets/iconsItemTech/contact/email.svg";
+import Phone from "../../../../public/assets/iconsItemTech/contact/phone.svg";
 
 export default function LoginPage() {
   return (

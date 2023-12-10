@@ -1,0 +1,71 @@
+@font-face {
+  font-family: 'MrRobot';
+  src: local('MrRobot'), url('../../../public/MR\ ROBOT.ttf') format('truetype');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+
+.font-firaCode {
+  font-family: 'Fira Code', monospace;
+}
+
+.font-mrRobot {
+  font-family: 'MrRobot';
+}
+
+.btnMain::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
+  transition: all 0.4s ease-out;
+  z-index: -1;
+}
+
+.btnMain:hover {
+  transition: all 0.4s ease-out;
+}
+
+.btnMain:hover::before {
+  width: 100%;
+  height: 100%;
+  background-color: #972DA8;
+  transform: translateX(0);
+  transition: all 0.4s ease-out;
+}
+
+@media screen and (max-width: 600px) { 
+ 
+}
+
+@media screen and (max-width: 970px) {
+  .controls {
+    top: auto;
+    bottom: 0;
+    flex-direction: row;
+    justify-content: center;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    background-color: #404040;
+  }
+
+    .controls .control {
+    margin: 1rem 0.3rem;
+  }
+}
+/* Animações */
+
+.activeAnimation {
+  animation: appear 1s ease-in-out;
+  transform: translateY(0) scaleY(1);
+}
+@keyframes appear {
+  0% {
+    transform: translateY(-100%) scaleY(0);
+  }
+  100% {
+    transform: translateY(0) scaleY(1);
+  }
+}
