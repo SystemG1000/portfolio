@@ -13,19 +13,20 @@ import { useForm, FormProvider } from 'react-hook-form'
 import { z } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { Form } from '../../../components/Form'
+import Title from "@/components/title/Title";
 
 const userSchema = z.object({
   email: z.string().min(1, {
     message: 'Email é obrigatório',
   }).email({
     message: 'Formato de e-mail inválido'
-  }).toUpperCase(),
+  }).toLowerCase(),
   name: z.string().min(1,  {
     message: 'Nome é obrigatório',
   }).toUpperCase(),
   text: z.string().min(1, {
     message: 'Texto é obrigatório',
-  }).toUpperCase(),
+  })
 })
 
 type UserData = z.infer<typeof userSchema>
@@ -45,11 +46,9 @@ export default function Contact() {
   } = UserForm;
 
   return (
-      <section className="py-12 px-24 bg-[#2A2E35]">
+      <section className="py-12 px-24 bg-[#2A2E35] max-sm:py-8 max-sm:px-14">
         <div className="font-firaCode">
-        <div className="mainTitle">
-          <h2>About <span>me</span><span className="bgText">About me</span></h2>
-        </div>
+        <Title text="About" textSpan="me" span="About me" />
           <div className="flex flex-col pt-12">
             <div className="flex-2 justify-center items-center text-center">
               <h4 className="mt-4 text-4xl uppercase">Contact me here</h4>
@@ -58,28 +57,28 @@ export default function Contact() {
                 laborum numquam? Quam excepturi perspiciatis quas quasi.
               </p>
               <div className="">
-                <div className="flex items-center justify-center">
+                <div className="flex items-center justify-around p-1 max-sm:flex-col max-sm:my-4 max-sm:mx-0 max-sm:justify-center">
                   <div className="grid grid-cols-40-1fr items-center justify-center">
                     <Image src={Locate} alt="" />
                     <span>Localização</span>
                   </div>
                   <p className="my-2 mx-0">: Paraíba, João Pessoa</p>
                 </div>
-                <div className="flex items-center justify-center">
+                <div className="flex items-center justify-around p-1 max-sm:flex-col max-sm:my-4 max-sm:mx-0 max-sm:justify-center">
                   <div className="grid grid-cols-40-1fr items-center justify-center">
                     <Image src={Email} alt="" />
                     <span>Email</span>
                   </div>
                   <p>: gustaf_alfredo@outlook.com</p>
                 </div>
-                <div className="flex items-center justify-center">
+                <div className="flex items-center justify-around p-1 max-sm:flex-col max-sm:my-4 max-sm:mx-0 max-sm:justify-center">
                   <div className="grid grid-cols-40-1fr items-center justify-center">
                     <Image src={Phone} alt="" />
                     <span>Celular</span>
                   </div>
                   <p>: (83) 99338-6900 </p>
                 </div>
-                <div className="flex items-center justify-center">
+                <div className="flex items-center justify-around p-1 max-sm:flex-col max-sm:my-4 max-sm:mx-0 max-sm:justify-center">
                   <div className="grid grid-cols-40-1fr items-center justify-center">
                     <Image src={Language} alt="" />
                     <span>Linguagens</span>
@@ -88,7 +87,7 @@ export default function Contact() {
                 </div>
               </div>
               <div>
-                <div className="flex mt-8">
+                <div className="flex mt-8 max-sm:justify-center max-sm:items-center">
                   <a href="" className="flex items-center justify-center bg-[#972DA8] hover:bg-violet-600 text-zinc-300 cursor-pointer w-14 h-14 rounded-full my-0 mx-1">
                     <Image src={GitHub} alt="" />
                   </a>
@@ -98,11 +97,11 @@ export default function Contact() {
                 </div>
               </div>
             </div>
-            <div className="flex-3 ml-12 pb-8 gap-8">
+            <div className="flex-3 ml-12 pb-8 gap-8 max-sm:ml-0">
               <FormProvider {...UserForm}> 
                 <form
                   onSubmit={handleSubmit(userText)}
-                  className="flex flex-col gap-4 w-3/4 justify-center m-auto"
+                  className="flex flex-col gap-4 w-3/4 justify-center m-auto max-sm:w-full max-sm:my-9"
                 >
                   <Form.Field>
                     <Form.Label htmlFor="name">
@@ -131,7 +130,7 @@ export default function Contact() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="bg-[#972DA8] text-white rounded px-3 h-10 font-semibold text-sm hover:bg-violet-600"
+                    className="bg-[#972DA8] text-white rounded px-3 h-10 font-semibold text-sm hover:bg-violet-600 max-sm:my-4"
                   >
                     Entrar
                   </button>
