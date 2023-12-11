@@ -46,7 +46,7 @@ export default function Contact() {
   } = UserForm;
 
   return (
-      <section className="py-12 px-24 bg-[#2A2E35] max-sm:py-8 max-sm:px-14">
+      <section className="py-12 px-24 text-zinc-200 bg-[#2A2E35] max-sm:py-8 max-sm:px-14 ">
         <div className="font-firaCode">
         <Title text="About" textSpan="me" span="About me" />
           <div className="flex flex-col pt-12">
@@ -104,7 +104,7 @@ export default function Contact() {
                   className="flex flex-col gap-4 w-3/4 justify-center m-auto max-sm:w-full max-sm:my-9"
                 >
                   <Form.Field>
-                    <Form.Label htmlFor="name">
+                    <Form.Label className="text-zinc-500 text-base" htmlFor="name">
                       Nome
                     </Form.Label>
                     <Form.Input type="text" name="name" />
@@ -112,7 +112,7 @@ export default function Contact() {
                   </Form.Field>
 
                   <Form.Field>
-                    <Form.Label htmlFor="email">
+                    <Form.Label className="text-zinc-500 text-base" htmlFor="email">
                       Email
                     </Form.Label>
                     <Form.Input type="email" name="email" />
@@ -120,7 +120,7 @@ export default function Contact() {
                   </Form.Field>
 
                   <Form.Field>
-                    <Form.Label htmlFor="text">
+                    <Form.Label className="text-zinc-500 text-base" htmlFor="text">
                       Texto
                     </Form.Label>
                     <Form.TextArea cols={5} rows={5} text="text" name="text" />

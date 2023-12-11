@@ -23,7 +23,7 @@ const imageStyle: {
 
 export default function LoginPage() {
   return (
-    <div className={styles.content}>
+    <div className={`${styles.content} bg-[#2A2E35`}>
       <section className={styles.container}>
         <div className={styles.mainTitle}>
           <h2>

@@ -7,6 +7,8 @@ import profile from '../../../public/assets/iconsHeader/user.svg';
 import folder from '../../../public/assets/iconsHeader/folder.svg';
 import book from '../../../public/assets/iconsHeader/book.svg';
 import email from '../../../public/assets/iconsHeader/email.svg';
+import Loading from "../../components/LoadingDots/index"
+import { Suspense } from 'react';
 
 import '../css/globals.css';
 
@@ -21,7 +23,9 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body>
-        {children}
+        <Suspense fallback={<Loading />}>
+          {children}
+        </Suspense>
         <div className={`controls`}>
           <div className={`control ${pathname === '/' ? "active" : ''}`}>
             <Link href={"/"}><Image src={home} alt="home" /></Link>
