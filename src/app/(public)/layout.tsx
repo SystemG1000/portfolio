@@ -1,7 +1,4 @@
 'use client'
-import { Suspense } from "react";
-import NextNProgress from 'nextjs-progressbar';
-import Loading from "./loading";
 import Image from 'next/image'; 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation'
