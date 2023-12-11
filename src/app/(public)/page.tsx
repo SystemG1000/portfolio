@@ -2,9 +2,28 @@
 import Image from "next/image";
 import photo from "../../../public/assets/PhotoProfille.png";
 import download from "../../../public/assets/iconsHeader/download.svg";
+import { useState } from 'react'
+import { useForm, FormProvider } from 'react-hook-form'
+import { z } from 'zod'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { Form } from '../../components/Form'
+
 import "../css/home.css";
 
 import { useMediaQuery } from "@react-hook/media-query";
+
+const userSchema = z.object({
+  email: z.string().min(1, {
+    message: 'Email é obrigatório',
+  }).email({
+    message: 'Formato de e-mail inválido'
+  }).toUpperCase(),
+  name: z.string().min(1,  {
+    message: 'Nome é obrigatório',
+  }).toUpperCase(),
+})
+
+type UserData = z.infer<typeof userSchema>
 
 export default function Home() {
   const isMobile = useMediaQuery("(max-width: 768px)");

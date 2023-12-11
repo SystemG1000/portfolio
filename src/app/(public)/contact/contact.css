@@ -1,3 +1,38 @@
+@font-face {
+  font-family: 'MrRobot';
+  src: local('MrRobot'), url('../../../../public//MR\ ROBOT.ttf') format('truetype');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+
+
+.font-firaCode {
+  font-family: 'Fira Code', monospace;
+}
+
+.font-mrRobot {
+  font-family: 'MrRobot';
+}
+
+.grid-cols-40-1fr {
+  grid-template-columns: 40px 1fr;
+}
+
+.flex-3 {
+  flex: 3;
+}
+
+.flex-2 {
+  flex: 2;
+}
+
+.teste a:hover {
+  background-color: #972DA8;
+}
+.teste a:hover i {
+  color: #972DA8;
+}
+
 
 .mainTitle {
   text-align: center;
@@ -29,84 +64,6 @@
   z-index: 1;
 }
 
-.workInProgress {
-  background-color: antiquewhite;
-}
-
-
-.container {
-  padding: 3rem 6rem !important;
-}
-
-.contactContentCon {
-  display: flex;
-  padding-top: 3.5rem;
-  flex-direction: column;
-  color: antiquewhite;
-  font-family: 'Fira Code';
-
-}
-.contactContentCon .leftContact {
-  flex: 2;
-}
-.contactContentCon .leftContact h4 {
-  margin-top: 1rem;
-  font-size: 2rem;
-  text-transform: uppercase;
-}
-.contactContentCon .leftContact p {
-  margin: 1rem 0;
-  line-height: 2rem;
-}
-.contactContentCon .leftContact .contactInfo .contactItem {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.contactContentCon .leftContact .contactInfo .contactItem p {
-  margin: 0.3rem 0 !important;
-  padding: 0 !important;
-}
-.contactContentCon .leftContact .contactInfo .contactItem .icon {
-  display: grid;
-  grid-template-columns: 40px 1fr;
-  align-items: center;
-  justify-content: center;
-}
-.contactContentCon .leftContact .contactInfo .contactItem .icon i {
-  display: flex;
-  align-items: center;
-  font-size: 1.3rem;
-}
-.contactContentCon .leftContact .contactIcon {
-  display: flex;
-  margin-top: 2rem;
-}
-.contactContentCon .leftContact .contactIcon a {
-  display: flex;
-  align-items: center;
-  color: whitesmoke;
-  background-color: #6C7983;
-  cursor: pointer;
-  justify-content: center;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  margin: 0 0.4rem;
-  transition: all 0.4s ease-in-out;
-}
-.contactContentCon .leftContact .contactIcon a:hover {
-  background-color: #972DA8;
-}
-.contactContentCon .leftContact .contactIcon a:hover i {
-  color: #972DA8;
-}
-.contactContentCon .leftContact .contactIcon a i {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.3rem;
-}
 .contactContentCon .rightContact {
   flex: 3;
   margin-left: 3rem;
@@ -221,8 +178,5 @@
     flex-direction: column;
     font-size: 15px;
     padding: 1rem 0;
-  }
-
-  .contactContainer {
   }
 }
