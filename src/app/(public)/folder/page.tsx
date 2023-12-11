@@ -1,11 +1,11 @@
 import Image from "next/image";
 import styles from "./folder.module.css";
 
-import por1 from "../../../public/assets/port1.jpg";
-import Cardapio from "../../../public/assets/cardapio.png";
-import Github from "../../../public/assets/github.svg";
-import Xadrez from "../../../public/assets/xadrez.png";
-import WorkInProgress from "../../../public/assets/workInProgress.jpg";
+import por1 from "../../../../public/assets/port1.jpg";
+import Cardapio from "../../../../public/assets/cardapio.png";
+import Github from "../../../../public/assets/github.svg";
+import Xadrez from "../../../../public/assets/xadrez.png";
+import WorkInProgress from "../../../../public/assets/workInProgress.jpg";
 
 type ObjectFit = "fill" | "contain" | "cover" | "none" | "scale-down";
 
@@ -23,7 +23,7 @@ const imageStyle: {
 
 export default function LoginPage() {
   return (
-    <div className={styles.content}>
+    <div className={`${styles.content} bg-[#2A2E35`}>
       <section className={styles.container}>
         <div className={styles.mainTitle}>
           <h2>

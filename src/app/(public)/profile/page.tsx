@@ -1,21 +1,21 @@
 import styles from './profile.module.css';
-import download from "../../../public/assets/iconsHeader/download.svg";
+import download from "../../../../public/assets/iconsHeader/download.svg";
 import Image from "next/image"; 
 
-import TypeScript from "../../../public/assets/iconsItemTech/languages-databases/TypeScript.svg";
-import JavaScript from "../../../public/assets/iconsItemTech/languages-databases/JavaScript.svg";
-import Java from "../../../public/assets/iconsItemTech/languages-databases/Java.svg";
-import PostgreSQL from "../../../public/assets/iconsItemTech/languages-databases/PostgreSQL.svg";
-import MySQL from "../../../public/assets/iconsItemTech/languages-databases/MySQL.svg"
+import TypeScript from "../../../../public/assets/iconsItemTech/languages-databases/TypeScript.svg";
+import JavaScript from "../../../../public/assets/iconsItemTech/languages-databases/JavaScript.svg";
+import Java from "../../../../public/assets/iconsItemTech/languages-databases/Java.svg";
+import PostgreSQL from "../../../../public/assets/iconsItemTech/languages-databases/PostgreSQL.svg";
+import MySQL from "../../../../public/assets/iconsItemTech/languages-databases/MySQL.svg"
 
-import Git from "../../../public/assets/iconsItemTech/other/git.svg";
-import Node from "../../../public/assets/iconsItemTech/other/nodejs.svg";
+import Git from "../../../../public/assets/iconsItemTech/other/git.svg";
+import Node from "../../../../public/assets/iconsItemTech/other/nodejs.svg";
 
-import Vue from "../../../public/assets/iconsItemTech/framework/vue.svg";
-import React from "../../../public/assets/iconsItemTech/framework/react.svg";
-import Spring from "../../../public/assets/iconsItemTech/framework/spring.svg"
+import Vue from "../../../../public/assets/iconsItemTech/framework/vue.svg";
+import React from "../../../../public/assets/iconsItemTech/framework/react.svg";
+import Spring from "../../../../public/assets/iconsItemTech/framework/spring.svg"
 
-import Education from "../../../public/assets/education.svg"
+import Education from "../../../../public/assets/education.svg";
 
 
 export default function LoginPage() {
