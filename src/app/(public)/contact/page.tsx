@@ -104,7 +104,7 @@ export default function Contact() {
                   className="flex flex-col gap-4 w-3/4 justify-center m-auto max-sm:w-full max-sm:my-9"
                 >
                   <Form.Field>
-                    <Form.Label className="text-zinc-500 text-base" htmlFor="name">
+                    <Form.Label className="text-zinc-300 text-base" htmlFor="name">
                       Nome
                     </Form.Label>
                     <Form.Input type="text" name="name" />
@@ -112,7 +112,7 @@ export default function Contact() {
                   </Form.Field>
 
                   <Form.Field>
-                    <Form.Label className="text-zinc-500 text-base" htmlFor="email">
+                    <Form.Label className="text-zinc-300 text-base" htmlFor="email">
                       Email
                     </Form.Label>
                     <Form.Input type="email" name="email" />
