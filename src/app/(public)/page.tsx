@@ -42,7 +42,7 @@ export default function Home() {
           <div className="flex flex-col justify-center col-span-7 pr-10 max-md:pr-0 max-md:grid-rows-1 max-md:pr-0! max-md:w-11/12 max-md:my-0 max-md:mx-auto max-md:grid max-md:items-center max-md:justify-center">
             <div className="2xl:flex 2xl:flex-col 2xl:gap-6">
               <h1 className="text-[#972Da8] text-5xl font-mrRobot max-md:text-4xl max-md:text-center max-md:p-12 2xl:text-6xl">
-                Hi, I'm{" "}
+                Hi, I&apos;m{" "}
                 <span className="text-zinc-300">
                   Gustavo <br />
                   Alfredo.

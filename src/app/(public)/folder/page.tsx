@@ -34,7 +34,7 @@ export default function LoginPage() {
 
         <p className={styles.portText}>
           {" "}
-          Here is some of my work that I've done in various programming
+          Here is some of my work that Ive done in various programming
           languages.
         </p>
 
