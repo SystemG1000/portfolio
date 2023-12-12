@@ -1,11 +1,10 @@
 import Image from "next/image";
 import styles from "./folder.module.css";
-
-import por1 from "../../../../public/assets/port1.jpg";
 import Cardapio from "../../../../public/assets/cardapio.png";
 import Github from "../../../../public/assets/github.svg";
 import Xadrez from "../../../../public/assets/xadrez.png";
 import WorkInProgress from "../../../../public/assets/workInProgress.jpg";
+import Title from "@/components/title/Title";
 
 type ObjectFit = "fill" | "contain" | "cover" | "none" | "scale-down";
 
@@ -25,12 +24,7 @@ export default function LoginPage() {
   return (
     <div className={`${styles.content} bg-[#2A2E35`}>
       <section className={styles.container}>
-        <div className={styles.mainTitle}>
-          <h2>
-            Port<span>folio</span>
-            <span className={styles.bgText}>Portfolio</span>
-          </h2>
-        </div>
+      <Title text="Port" textSpan="folio" span="Portfolio" />
 
         <p className={styles.portText}>
           {" "}
@@ -84,14 +78,6 @@ export default function LoginPage() {
                 style={imageStyle}
               />
             </div>
-            {/* <div className={styles.hoverItems}>
-              <h3>Project Source</h3>
-              <div className={styles.icons}>
-                <a href="#" className={styles.icon}>
-                  <Image src={Github} alt=""></Image>
-                </a>
-              </div>
-            </div> */}
           </div>
           <div className={styles.portfolioItem}>
             <div className={styles.image}>
@@ -102,14 +88,6 @@ export default function LoginPage() {
                 style={imageStyle}
               />
             </div>
-            {/* <div className={styles.hoverItems}>
-              <h3>Project Source</h3>
-              <div className={styles.icons}>
-                <a href="#" className={styles.icon}>
-                  <Image src={Github} alt=""></Image>
-                </a>
-              </div>
-            </div> */}
           </div>
         </div>
       </section>
