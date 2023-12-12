@@ -4,7 +4,7 @@ import Cardapio from "../../../../public/assets/cardapio.png";
 import Github from "../../../../public/assets/github.svg";
 import Xadrez from "../../../../public/assets/xadrez.png";
 import WorkInProgress from "../../../../public/assets/workInProgress.jpg";
-import Title from "@/components/title/Title";
+import Title from "../../../components/title/Title";
 
 type ObjectFit = "fill" | "contain" | "cover" | "none" | "scale-down";
 
