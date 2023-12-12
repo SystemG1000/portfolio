@@ -4,7 +4,7 @@ import Cardapio from "../../../../public/assets/cardapio.png";
 import Github from "../../../../public/assets/github.svg";
 import Xadrez from "../../../../public/assets/xadrez.png";
 import WorkInProgress from "../../../../public/assets/workInProgress.jpg";
-import Title from "../../../components/title/Title";
+import Title from "@/components/title/Title";
 
 type ObjectFit = "fill" | "contain" | "cover" | "none" | "scale-down";
 
@@ -24,7 +24,12 @@ export default function LoginPage() {
   return (
     <div className={`${styles.content} bg-[#2A2E35`}>
       <section className={styles.container}>
-      <Title text="Port" textSpan="folio" span="Portfolio" />
+      <div className={styles.mainTitle}>
+          <h2>
+            Port<span>folio</span>
+            <span className={styles.bgText}>Portfolio</span>
+          </h2>
+      </div>
 
         <p className={styles.portText}>
           {" "}
