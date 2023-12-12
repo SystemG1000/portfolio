@@ -5,6 +5,18 @@ import download from "../../../public/assets/iconsHeader/download.svg";
 import "../css/home.css";
 import { useMediaQuery } from "@react-hook/media-query";
 
+const handleDownload = () => {
+  // Substitua a URL abaixo pela URL real do seu arquivo DOCX externo
+  const externalDocxUrl = 'https://docs.google.com/document/d/1G2EF60Y966s_KemFSr0gtY0MYxPSt2N7/edit?usp=sharing&ouid=117049130360771796719&rtpof=true&sd=true';
+
+  // Crie um link temporário para o download
+  const downloadLink = document.createElement('a');
+  downloadLink.href = externalDocxUrl;
+  downloadLink.download = 'documento.docx';
+  downloadLink.click();
+};
+
+
 export default function Home() {
   const isMobile = useMediaQuery("(max-width: 768px)");
 
@@ -28,8 +40,8 @@ export default function Home() {
           </div>
           {/* === Right === */}
           <div className="flex flex-col justify-center col-span-7 pr-10 max-md:pr-0 max-md:grid-rows-1 max-md:pr-0! max-md:w-11/12 max-md:my-0 max-md:mx-auto max-md:grid max-md:items-center max-md:justify-center">
-            <div className="">
-              <h1 className="text-[#972Da8] text-5xl font-mrRobot max-md:text-4xl max-md:text-center max-md:p-12">
+            <div className="2xl:flex 2xl:flex-col 2xl:gap-6">
+              <h1 className="text-[#972Da8] text-5xl font-mrRobot max-md:text-4xl max-md:text-center max-md:p-12 2xl:text-6xl">
                 Hi, I'm{" "}
                 <span className="text-zinc-300">
                   Gustavo <br />
@@ -49,7 +61,7 @@ export default function Home() {
                   </div>
                 )}
               </div>
-              <p className="text-base my-4 text-justify w-3/4 max-lg:w-full max-md:text-lg">
+              <p className="text-base my-4 text-justify w-3/4 max-lg:w-full max-md:text-lg 2xl:text-xl">
                 {" "}
                 Sou desenvolvimento web, utilizando TypeScript, React e Vue no
                 front-end, e Java Spring e NodeJS no back-end. Possuo habilidade
@@ -59,7 +71,7 @@ export default function Home() {
             </div>
             <div className="flex self-start my-4 max-md:items-center max-md:justify-center max-md:w-full max-md:my-9">
               <a
-                href=""
+                onClick={handleDownload}
                 className="btnMain z-20 rounded-3xl relative border-4 border-dashed border-[#972DA8] flex self-start items-center overflow-hidden"
               >
                 <span className="pl-2 pr-2 pt-3 pb-3 font-mrRobot font-light">
